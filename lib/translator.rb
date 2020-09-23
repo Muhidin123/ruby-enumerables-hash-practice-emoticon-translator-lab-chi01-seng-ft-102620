@@ -2,7 +2,8 @@ require 'yaml'
 require 'pry'
 
 
-def load_library(path)
+def load_library(filepath)
+  emoticons = YAML.load_file(filepath)
   solution = emoticons.each_with_object({}) do |(key , value) , hash|
     hash["#{key}"] = {english: value[0], japanese: value[1]}
     binding.pry
