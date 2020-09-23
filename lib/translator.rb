@@ -4,7 +4,7 @@ require 'pry'
 
 def load_library(emoticons = YAML.load_file('emoticons.yml'))
   h = Hash.new
-  h = {{ emoticons | dict2items }}
+  h = { emoticons | dict2items }
   end
 end
 
