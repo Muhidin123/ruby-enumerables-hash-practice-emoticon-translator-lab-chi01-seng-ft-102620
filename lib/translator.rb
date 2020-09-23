@@ -17,6 +17,6 @@ end
 def get_english_meaning(filepath, emoticon)
   emoticons = load_library(filepath)
   solution = emoticons.find{|key , value| value[:japanese] == emoticon}
-  solution[1]
+  return solution[0]
   #binding.pry
 end
