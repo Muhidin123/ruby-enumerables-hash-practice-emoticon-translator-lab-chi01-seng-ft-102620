@@ -13,7 +13,7 @@ end
 def get_japanese_emoticon(filepath, emoticon)
   emoticons = load_library(filepath)
   result = emoticons.find{|key , value| value[:english] == emoticon}
-  binding.pry
+  #binding.pry
   return result.nil? ?  "Sorry, that emoticon was not found" : result[1][:japanese]
 end
 
